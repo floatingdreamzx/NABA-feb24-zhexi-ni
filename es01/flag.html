@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chinese Flag</title>
+<style>
+  .flag {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    background: #DE2910;
+  }
+  .flag .star {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background: #FFDE00;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+  .flag .star.big {
+    width: 128px;
+    height: 128px;
+  }
+  .flag .star.five {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-18deg);
+  }
+  .flag .star.five.big {
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-18deg);
+  }
+  .flag .star.small {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(18deg);
+  }
+</style>
+</head>
+<body>
+<div class="flag">
+  <div class="star five"></div>
+  <div class="star five big"></div>
+  <div class="star small"></div>
+</div>
+</body>
+</html>
