@@ -1,49 +1,129 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chinese Flag</title>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
 <style>
-  .flag {
-    width: 300px;
-    height: 200px;
-    position: relative;
-    background: #DE2910;
-  }
-  .flag .star {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    background: #FFDE00;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  }
-  .flag .star.big {
-    width: 128px;
-    height: 128px;
-  }
-  .flag .star.five {
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-18deg);
-  }
-  .flag .star.five.big {
-    top: 27%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-18deg);
-  }
-  .flag .star.small {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(18deg);
-  }
+
+.guoqi{position:relative; width:300px; height: 200px; background-color: red;}
+
+.star_five,.star_five_big,.star_five_small1,.star_five_small2,.star_five_small3,.star_five_small4 {
+
+  
+
+  position: absolute;
+
+  display: block;
+
+  color:yellow;
+
+  width: 0px;
+
+  height: 0px;
+
+  border-right: 100px solid transparent;
+
+  border-bottom: 70px solid yellow;
+
+  border-left: 100px solid transparent;
+
+  transform: rotate(35deg);
+
+}
+
+.star_five:before,.star_five_big:before,.star_five_small1:before,.star_five_small2:before,.star_five_small3:before,.star_five_small4:before {
+
+  border-bottom: 80px solid yellow;
+
+  border-left: 30px solid transparent;
+
+  border-right: 30px solid transparent;
+
+  position: absolute;
+
+  height: 0;
+
+  width: 0;
+
+  top: -45px;
+
+  left: -65px;
+
+  display: block;
+
+  content: '';
+
+  transform: rotate(-35deg);
+
+}
+
+.star_five:after,.star_five_big:after,.star_five_small1:after,.star_five_small2:after,.star_five_small3:after,.star_five_small4:after {
+
+  position: absolute;
+
+  display: block;
+
+  color: yellow;
+
+  top: 3px;
+
+  left: -105px;
+
+  width: 0px;
+
+  height: 0px;
+
+  border-right: 100px solid transparent;
+
+  border-bottom: 70px solid yellow;
+
+  border-left: 100px solid transparent;
+
+  transform: rotate(-70deg);
+
+  content: '';
+
+} 
+
+.star_five_big{transform: rotate(35deg) scale(0.3); left: -50px; top: 10px;}
+
+.star_five_small1{transform: rotate(55deg) scale(0.1); top: -14px; left: 2px;}
+
+.star_five_small2{transform: rotate(86deg) scale(0.1); top: 3px; left: 20px;}
+
+.star_five_small3{transform: rotate(35deg) scale(0.1); top: 30px; left: 20px;}
+
+.star_five_small4{transform: rotate(55deg) scale(0.1); top: 48px; left: 2px;}
+
 </style>
+
 </head>
+
 <body>
-<div class="flag">
-  <div class="star five"></div>
-  <div class="star five big"></div>
-  <div class="star small"></div>
+
+<div class="guoqi">
+
+    <div class="star_five_big"></div>
+
+    <div class="star_five_small1"></div>
+
+    <div class="star_five_small2"></div>
+
+    <div class="star_five_small3"></div>
+
+    <div class="star_five_small4"></div>
+
 </div>
+
 </body>
+
 </html>
