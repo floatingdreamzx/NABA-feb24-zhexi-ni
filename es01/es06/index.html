@@ -1,43 +1,138 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Title of the document</title>
-<link rel="stylesheet" href="css/stile.css">
-</head>
-
-<body>
-
-    <header>
-        <div class="zhexi ni">Nome</div>
-        <nav>NAV</nav>
-    </header>
-
-    <div class="wrapper">
-        <main>colonna principale
-            <ol>
-                <li>capire il problema, leggere la richiesta da chat, e fare domande</li>
-                <li>fare nuova cartella e nuovi file (es06 e i file come al solito)</li>
-                <li>copiare e incollare la struttura html</li>
-                <li>copiare e incollare i tag richesti (nav, main, header, footer, aside) e metterli in ordine</li>
-                <li>dare su css delle proprietà per rendere tutto visibile (border)</li>
-                <li>se dobbiamo giustapporre (mettere accanto), capire cosa nidificare e come (dove metto un div padre?)</li>
-                <li>applicare la proprietà display: flex</li>
-            </ol>
-        </main>
-        <aside>
-            <section>Sezione 01</section>
-            <section>Sezione 02</section>
-            <section>Sezione 03</section>
-        </aside>
-        <aside>
-            <section>Sezione 01</section>
-            <section>Sezione 02</section>
-            <section>Sezione 03</section>
-        </aside>    
-    </div>
-
-    <footer>pie di pagina</footer>
-
-</body>
-
+	<head>
+		<meta charset="utf-8">
+		<title>carta prezzo</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding: 0;
+				/*方便设置各个元素的尺寸*/
+				box-sizing: border-box;
+				list-style: none;
+			}
+			
+			/* 2.设定元素尺寸 */
+			.package_box{
+				width: 280px;
+				/* background-color: #87CEEB; */
+			}
+			.package_img{
+				width: 100%;
+				/* 清除图片下方行内块元素默认的空白区域 */
+				display: block;
+				
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+			}
+			.package_details{
+				width: 100%;
+				height: 360px;
+				background-color: #FFF;
+				text-align: center;
+				
+				padding: 16px;
+			}
+			
+			/* 3.设定元素细节 */
+			.package_name{
+				display: block;
+				font-size: 22.4px;
+				font-weight: 600;
+				color: #00bd56;
+				
+				margin-bottom: 8px;
+			}
+			
+			.package_price {
+				font-size: 32px;
+				font-weight: 600;
+				color: #000;
+			}
+			
+			.package_price sub,
+			.package_price sup{
+				font-size: 22.4px;
+				font-weight: 400;
+				color: #666;
+			}
+			
+			.package_price span,
+			.package_price sub{
+				margin-left: -8px;
+			}
+			
+			
+			.package_list{
+				font-size: 16px;
+				padding: 16px;				
+			}
+			
+			.package_list_item:nth-of-type(odd){
+				background-color: rgba(0,0,0,0.05);
+			}
+			.package_list_item{
+				height: 36px;
+				line-height: 36px;
+			}
+			.btn{
+				color: #fff;
+				font-size: 16px;
+				font-weight: 600;
+				background-color: #00bd56;
+				 /* transparent属性用来指定全透明色彩*/
+				border:1px solid transparent;
+				border-radius: 3px;
+				
+				padding: 8px 24px;
+				cursor: pointer;
+			}
+			
+			/* 4.设定元素间距 */
+			
+			/* 5.设定动态效果 */
+			.package_box:hover{
+				box-shadow: 0 24px 38px rgba(0, 0, 0, 15%);
+			}
+			*::selection{
+				background-color: #00bd56;
+				color: #FFF;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!-- 0.分析页面结构 -->
+		<!-- 1.设定页面元素 -->
+		<div class="package_box">
+		  <div class="package_details">
+			  <span class="package_name">标准套餐</span>
+			  <span class="package_price">
+				  <sup>￥</sup>
+				  <span>299</span>
+				  <sub>/mese</sub>
+			  </span>	
+			  <!-- .package_list>li.package_list_item*5			 -->
+			  <ul class="package_list">
+					<li class="package_list_item">
+						5 passeggiate con il cane
+					</li>
+					<li class="package_list_item">
+						3 consultazioni
+					</li>
+					<li class="package_list_item">
+						3 bagni
+					</li>
+					<li class="package_list_item">
+						Supporto tecnico gratuito
+					</li>
+				</ul>							
+				<button class="btn">ordina adesso</button>			
+							
+							
+			</div>
+			
+			
+		</div>		
+	</body>
 </html>
