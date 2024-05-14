@@ -16,8 +16,8 @@ div{
 
 }
 div:hover{
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 400px;
     transform: rotate(12deg); translate:(50px,50) ;
     /* top: 20px;
     left: 20px; */
